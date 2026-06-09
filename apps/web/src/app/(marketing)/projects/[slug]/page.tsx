@@ -1,14 +1,14 @@
 type ProjectPageProps = {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 };
 
 export async function generateMetadata({ params }: ProjectPageProps) {
-  const { slug } = params;
+  const { slug } = await params;
   return { title: slug.replace(/-/g, " ") };
 }
 
 export default async function ProjectDetailPage({ params }: ProjectPageProps) {
-  const { slug } = params;
+  const { slug } = await params;
 
   return (
     <div className="mx-auto max-w-4xl px-4 py-20 sm:px-6 lg:px-8">

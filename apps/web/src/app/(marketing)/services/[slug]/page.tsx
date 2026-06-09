@@ -2,7 +2,7 @@ import Link from "next/link";
 import { MotionCard } from "@/components/visuals/MotionCard";
 
 type Props = {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 };
 
 const descriptions: Record<string, string> = {
