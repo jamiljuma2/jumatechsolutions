@@ -3,7 +3,7 @@
 services:
   - type: web
     name: jumatech-api
-    env: node
+    runtime: node
     repo: https://github.com/jamiljuma2/jumatechsolutions.git
     branch: main
     plan: starter
