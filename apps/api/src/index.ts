@@ -1,6 +1,6 @@
 import cookieParser from "cookie-parser";
 import express from "express";
-import { default as helmet } from "helmet";
+import { createRequire } from "node:module";
 import multer from "multer";
 import { corsMiddleware } from "./middleware/cors.js";
 import { errorHandler } from "./middleware/errorHandler.js";
@@ -14,6 +14,8 @@ import { env } from "./config/env.js";
 
 const app = express();
 const upload = multer({ storage: multer.memoryStorage() });
+const require = createRequire(import.meta.url);
+const helmet = require("helmet") as typeof import("helmet").default;
 
 app.use(helmet());
 app.use(corsMiddleware);
