@@ -1,4 +1,5 @@
 {
+  "$schema": "https://json.schemastore.org/package",
   "name": "jumatech-solutions",
   "private": true,
   "packageManager": "pnpm@10.12.4",

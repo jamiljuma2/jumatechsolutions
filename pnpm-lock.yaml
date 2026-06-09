@@ -63,6 +63,9 @@ importers:
         specifier: ^3.23.8
         version: 3.25.76
     devDependencies:
+      '@express-rate-limit/tsconfig':
+        specifier: ^1.0.2
+        version: 1.0.5
       '@types/bcryptjs':
         specifier: ^2.4.6
         version: 2.4.6
@@ -670,6 +673,9 @@ packages:
   '@eslint/plugin-kit@0.4.1':
     resolution: {integrity: sha512-43/qtrDUokr7LJqoF2c3+RInu/t4zfrpYdoSDfYyhg52rwLV6TnOvdG4fXm7IkSB3wErkcmJS9iEhjVtOSEjjA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+
+  '@express-rate-limit/tsconfig@1.0.5':
+    resolution: {integrity: sha512-KOOmByklAUcBbkfrz/al56m13YfBRoTVQNfU9R2IwQMjCgP2axt2R7hQTR+nAM40dblF5BWa/PP3q+6ZyQC0iA==}
 
   '@hookform/resolvers@3.10.0':
     resolution: {integrity: sha512-79Dv+3mDF7i+2ajj7SkypSKHhl1cbln1OGavqrsF7p6mbUv11xpqpacPsGDCTRvCSjEEIez2ef1NveSVL3b0Ag==}
@@ -3418,6 +3424,8 @@ snapshots:
     dependencies:
       '@eslint/core': 0.17.0
       levn: 0.4.1
+
+  '@express-rate-limit/tsconfig@1.0.5': {}
 
   '@hookform/resolvers@3.10.0(react-hook-form@7.77.0(react@18.3.1))':
     dependencies:
