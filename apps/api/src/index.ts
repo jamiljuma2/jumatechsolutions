@@ -1,6 +1,6 @@
 import cookieParser from "cookie-parser";
 import express from "express";
-import * as helmet from "helmet";
+import { default as helmet } from "helmet";
 import multer from "multer";
 import { corsMiddleware } from "./middleware/cors.js";
 import { errorHandler } from "./middleware/errorHandler.js";
@@ -15,7 +15,7 @@ import { env } from "./config/env.js";
 const app = express();
 const upload = multer({ storage: multer.memoryStorage() });
 
-app.use(helmet.default());
+app.use(helmet());
 app.use(corsMiddleware);
 app.use(express.json({ limit: "2mb" }));
 app.use(cookieParser());
