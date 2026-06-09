@@ -1,0 +1,21 @@
+# Render service definition for the API
+# Replace or add environment variables and secrets in the Render dashboard (do NOT commit secrets).
+services:
+  - type: web
+    name: jumatech-api
+    env: node
+    repo: https://github.com/jamiljuma2/jumatechsolutions.git
+    branch: main
+    plan: starter
+    buildCommand: pnpm install && pnpm --filter @repo/api build
+    startCommand: pnpm --filter @repo/api start
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production
+
+# Add the following required secrets via the Render dashboard for production:
+# - JWT_SECRET
+# - DATABASE_URL
+# - CLOUDINARY_API_KEY, CLOUDINARY_API_SECRET, CLOUDINARY_CLOUD_NAME (optional)
+# - RESEND_API_KEY (optional)
