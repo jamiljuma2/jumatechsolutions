@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "./base.json",
+  "compilerOptions": {
+    "lib": ["dom", "dom.iterable", "es2022"],
+    "incremental": true,
+    "plugins": [{ "name": "next" }],
+    "paths": {
+      "@/*": ["../../apps/web/src/*"],
+      "@repo/shared": ["../../packages/shared/src/index.ts"]
+    }
+  },
+  "include": ["../../apps/web/src/**/*.ts", "../../apps/web/src/**/*.tsx", "../../apps/web/next-env.d.ts"],
+  "exclude": ["node_modules"]
+}

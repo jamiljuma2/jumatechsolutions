@@ -1,0 +1,10 @@
+{
+  "name": "@repo/tsconfig",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "build": "node -e \"process.exit(0)\"",
+    "typecheck": "node -e \"process.exit(0)\"",
+    "lint": "node -e \"process.exit(0)\""
+  }
+}
